@@ -8,7 +8,7 @@ image:
   repository: 192.168.243.194:30443/library/samples/react-dashboard
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: v1.0
+  tag: v1.0.6
 
 imagePullSecrets: []
 nameOverride: "react-dashboard"
