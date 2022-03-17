@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "react-dashboard-helmchart.fullname" . }}
+  labels:
+    {{- include "react-dashboard-helmchart.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "react-dashboard-helmchart.selectorLabels" . | nindent 4 }}
