@@ -18,4 +18,4 @@ spec:
       nodePort: {{ .Values.service.nodePort }}
       protocol: TCP
   selector:
-    {{- include "react-dashboard-helmchart.selectorLabels" . | nindent 4 }}
+    {{- include "react-dashboard.selectorLabels" . | nindent 4 }}

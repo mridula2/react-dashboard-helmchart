@@ -8,7 +8,7 @@ image:
   repository: 192.168.243.194:30443/library/samples/react-dashboard
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: v1.0
+  tag: v1.0.12
 
 imagePullSecrets: []
 nameOverride: "react-dashboard"
@@ -40,7 +40,7 @@ service:
   type: NodePort
   port: 3000
   targetPort: 3000
-  nodePort: 30802
+  nodePort: 30803
 
 ingress:
   enabled: false
